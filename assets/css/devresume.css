@@ -13924,7 +13924,8 @@ a.theme-link:hover {
 }
 
 .resume-wrapper {
-   border: 1px solid rgba(0, 0, 0, 0.025)
+   border: 1px solid rgba(0, 0, 0, 0.025);
+   max-width: 800px;
 }
 
 .resume-section-heading {
@@ -13947,8 +13948,8 @@ a.theme-link:hover {
 }
 
 .resume-name {
-   font-size: 2.75rem;
-   font-weight: 900;
+   font-size: 2rem;
+   font-weight: 500;
    /* letter-spacing: 0.4rem; */
    color: #54B689
 }
