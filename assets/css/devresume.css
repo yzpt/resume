@@ -14043,3 +14043,11 @@ a.resume-link:hover {
       border-left: 0
    }
 }
+
+@media (max-width: 540px) {
+   .resume-wrapper {
+       padding: 0.5rem !important; /* Apply padding 2 (p-2) equivalent */
+       margin-top: 0 !important;
+       margin-bottom: 0 !important;
+   }
+}
