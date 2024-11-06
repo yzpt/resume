@@ -798,11 +798,16 @@ progress {
    margin-left: auto
 }
 
+
 @media (min-width: 576px) {
 
    .container-sm,
    .container {
       max-width: 540px
+   }
+
+  .p-5 {
+   padding: 1rem !important
    }
 }
 

@@ -171,19 +171,16 @@ const diplomes = [
         school: "Polytech'Lille",
         date: "2013",
         description: "Optique, électronique, photonique, traitement du signal, mesure, programmation, analyse de données, statistiques",
-        tasks: [
-            "Stage IEMN",
-            "Stage MC2"
-        ]
+        tasks: [],
+        hr: true,
     },
     {
         title: "Master 2 recherche en micro-électronique et nanotechnologies",
         school: "Université de Lille",
         date: "2013",
         description: "Opto-électronique Terahertz, semi-conducteurs, hyperfréquences, nanotechnologies, traitement du signal, programmation",
-        tasks: [
-            "Projet simulation electromagnétique par éléments finis",
-        ]
+        tasks: [],
+        hr: true,
     },
     {
         title: "DUT Mesures Physiques",
@@ -191,6 +188,7 @@ const diplomes = [
         date: "2010",
         description: undefined,
         tasks: [],
+        hr: true,
     },
     {
         title: "1ère année de Licence de Mathématiques",
@@ -198,6 +196,7 @@ const diplomes = [
         date: "2006",
         description: undefined,
         tasks: [],
+        hr: false,
     }
 
 ]
@@ -211,7 +210,6 @@ const renderDiplomes = () => {
         item.classList.add("item", "mb-3");
 
         item.innerHTML = `
-            ${dip.hr ? '<hr>' : ''}
             <div class="item-heading row align-items-center mb-2">
             <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${dip.title}</h4>
             <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${dip.school} | ${dip.date}</div>
@@ -226,6 +224,7 @@ const renderDiplomes = () => {
             </ul>
             ` : ''}
             </div>
+            ${dip.hr ? '<hr>' : ''}
         `;
         diplomeList.appendChild(item);
     }
