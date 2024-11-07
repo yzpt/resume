@@ -14,14 +14,52 @@ const projects = [
     },
     {
         title: "Geolife GPS Tracking",
-        description: "Visualisation de trackings GPS du dataset Geolife, démonstration de la clusterisation ST-DBSCAN",
+        description: "Visualisation de trackings GPS du dataset Geolife",
         stack: ["Dash", "Plotly", "GeoPandas", "Scikit-Learn"],
         images: [
             "assets/images/geolife_dash1.png",
             "assets/images/geolife_dash2.png",
         ],
-        
+    },
+    {
+        title: "Imagerie satellite (Sentinel) avec Google Earth Engine",
+        description: "Détection et estimation de la végétation du Nord-Pas-de-Calais",
+        stack: ["Google Earth Engine", "Jupyter"],
+        images: [
+            "assets/images/sentinel1.png",
+            "assets/images/sentinel2.png",
+        ],
+    },
+    {
+        title: "Dashboards divers",
+        description: "",
+        stack: ["Dash", "Plotly", "GeoPandas"],
+        images: [
+            "assets/images/historic_dashboard_ongoing.png",
+            "assets/images/population_mapping_ongoing.png",
+        ],
+    },
+    {
+        title: "Automatisation de reporting",
+        description: "Extraits du projet KXI Wildertech d'analyse automatisée de séries temporelles et de reporting en ligne",
+        stack: ["Jupyter", "Flask", "Plotly", "Leaflet", "GCP", "Matplotlib"],
+        images: [
+            "assets/images/mdf1.png",
+            "assets/images/mdf3.png",
+            "assets/images/mdf4.png",
+            "assets/images/mdf2.png",
+        ],
+    },
+    {
+        title: "Zapmaths",
+        description: "Application web d'entraînement aux calculs",
+        stack: ["Python", "Php", "MySQL", "Apache", "Excel"],
+        images: [
+            "assets/images/zapmaths1.png",
+            "assets/images/zapmaths2.png",
+        ],
     }
+
 ]
 
 
@@ -30,19 +68,19 @@ const renderProjects = () => {
 
     projects.forEach(project => {
         const item = document.createElement("div");
-        item.classList.add("item", "mb-3");
+        item.classList.add("item", "mb-1");
 
         item.innerHTML = `
-            <div class="item-heading row align-items-center mb-2">
-                <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">${project.title}</h4>
+            <div class="item-heading row align-items-center mb-0">
+                <h4 class="item-title col-12 mb-0">${project.title}</h4>
             </div>
             <div class="item-content">
                 ${project.stack ? `
-                    <p class="m-0" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
+                    <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
                 ` : ''}
-                <p class="mb-1">${project.description}</p>
+                <p class="mb-0">${project.description}</p>
                 <div class="d-flex justify-content-between"></div>
-                <div class="row mt-3">
+                <div class="row mt-2">
                     ${project.images.map(img => `
                         <div class="col-12 col-md-6 mb-3">
                             <img src="${img}" class="img-fluid" alt="project image">
@@ -50,6 +88,7 @@ const renderProjects = () => {
                     `).join('')}
                 </div>
             </div>
+            <hr>
         `;
         projectList.appendChild(item);
     });

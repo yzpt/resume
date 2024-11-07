@@ -13986,7 +13986,8 @@ a.resume-link:hover {
 }
 
 .resume-main .item-title {
-   font-size: 1rem
+   font-size: 1rem;
+   padding-bottom: 0.25rem !important;
 }
 
 .resume-main .item-meta {
