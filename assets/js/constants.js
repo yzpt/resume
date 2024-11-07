@@ -1,128 +1,6 @@
-// experiences.js
-
-const projects = [
-    {
-        title: "V'Lille GCP ETL",
-        description: "ETL de l'état des stations V'Lille sur GCP",
-        stack: ["GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Flask", "Docker", "Javascript", "Google Maps API"],
-        github: "https://github.com/yzpt/vlille_gcp",
-        demo: "https://vlille-v1-app-service-dxpal7wuuq-od.a.run.app/",
-        images: [
-            "assets/images/diagram_vlille.svg",
-            "assets/images/flask_dashboard.png",
-        ],
-    },
-    {
-        title: "Geolife GPS Tracking",
-        description: "Visualisation de trackings GPS du dataset Geolife",
-        stack: ["Dash", "Plotly", "GeoPandas", "Scikit-Learn"],
-        images: [
-            "assets/images/geolife_dash1.png",
-            "assets/images/geolife_dash2.png",
-        ],
-    },
-    {
-        title: "Imagerie satellite (Sentinel) avec Google Earth Engine",
-        description: "Détection et estimation de la végétation du Nord-Pas-de-Calais",
-        stack: ["Google Earth Engine", "Jupyter"],
-        images: [
-            "assets/images/sentinel1.png",
-            "assets/images/sentinel2.png",
-        ],
-    },
-    {
-        title: "Dashboards divers",
-        description: "",
-        stack: ["Dash", "Plotly", "GeoPandas"],
-        images: [
-            "assets/images/historic_dashboard_ongoing.png",
-            "assets/images/population_mapping_ongoing.png",
-        ],
-    },
-    {
-        title: "Automatisation de reporting",
-        description: "Extraits du projet KXI Wildertech d'analyse automatisée de séries temporelles et de reporting en ligne",
-        stack: ["Jupyter", "Flask", "Plotly", "Leaflet", "GCP", "Matplotlib"],
-        images: [
-            "assets/images/mdf1.png",
-            "assets/images/mdf3.png",
-            "assets/images/mdf4.png",
-            "assets/images/mdf2.png",
-        ],
-    },
-    {
-        title: "Zapmaths",
-        description: "Application web d'entraînement aux calculs",
-        stack: ["Python", "Php", "MySQL", "Apache", "Excel"],
-        images: [
-            "assets/images/zapmaths1.png",
-            "assets/images/zapmaths2.png",
-        ],
-    }
-
-]
-
-
-const renderProjects = () => {
-    const projectList = document.getElementById("projects-list");
-
-    projects.forEach(project => {
-        const item = document.createElement("div");
-        item.classList.add("item", "mb-1");
-
-        item.innerHTML = `
-            <div class="item-heading row align-items-center mb-0">
-                <h4 class="item-title col-12 mb-0">${project.title}</h4>
-            </div>
-            <div class="item-content">
-                ${project.stack ? `
-                    <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
-                ` : ''}
-                <p class="mb-0">${project.description}</p>
-                <div class="d-flex justify-content-between"></div>
-                <div class="row mt-2">
-                    ${project.images.map(img => `
-                        <div class="col-12 col-md-6 mb-3">
-                            <img src="${img}" class="img-fluid" alt="project image">
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-            <hr>
-        `;
-        projectList.appendChild(item);
-    });
-};
-
-
-
-
-
-
-
-
 const introduction = [
     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat",
 ]
-
-
-
-const renderIntroduction = () => {
-    const introductionList = document.getElementById("introduction-list");
-
-    if (introductionList) {
-        introduction.forEach(intro => {
-            const item = document.createElement("div");
-            item.innerHTML = `
-                <p class="mb-1">${intro}</p>
-            `;
-
-            introductionList.appendChild(item);
-        });
-    } else {
-        console.error("Element with id 'introduction-list' not found");
-    }
-};
 
 
 const experiences = [
@@ -133,7 +11,6 @@ const experiences = [
         tasks: [
             "Analyse de tracking GPS & développement d'algorithmes de détection automatique de mode de transport",
             "Déploiement de plusieurs tableaux de bord de visualisation de données et analyses automatisées paramétrées (STDBSCAN, segmentation, tracking features, évaluation d'algorithmes)",
-            "Développement d'une carte électronique de tracking GPS : ESP32 + Neo6M + sim800L"
         ],
         description: "",
         stack: ["Pandas", "Dash", "Plotly", "Postgresql", "C++", "MicroPython", "Scikit-Learn"],
@@ -233,40 +110,6 @@ const experiences = [
 ]
 
 
-const renderExperiences = () => {
-    const experienceList = document.getElementById("experience-list");
-
-    experiences.forEach(exp => {
-        const item = document.createElement("div");
-        item.classList.add("item", "mb-3");
-
-        item.innerHTML = `
-            ${exp.hr ? '<hr>' : ''}
-            <div class="item-heading row align-items-center mb-2">
-                <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">${exp.title}</h4>
-                <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-start text-md-end">${exp.company} | ${exp.date}</div>
-            </div>
-            <div class="item-content">
-                ${exp.stack ? `
-                    <p class="m-0" style="color: #54B689; font-size: .8rem;">${exp.stack.join(' | ')}</p>
-                ` : ''}
-                ${exp.description != undefined ? `
-                <p class="mb-1">${exp.description}</p>
-                ` : ''}
-                <ul class="resume-list">
-                    ${exp.tasks.map(task => `<li>${task}</li>`).join('')}
-                </ul>
-            </div>
-        `;
-
-        experienceList.appendChild(item);
-    });
-};
-
-
-
-
-
 const diplomes = [
     {
         title: "Diplôme d'ingénieur en instrumentation scientifique",
@@ -306,39 +149,86 @@ const diplomes = [
 ]
 
 
-const renderDiplomes = () => {
-    const diplomeList = document.getElementById("diplomes-list");
-
-    diplomes.forEach(dip => {
-        const item = document.createElement("div");
-        item.classList.add("item", "mb-3");
-
-        item.innerHTML = `
-            <div class="item-heading row align-items-center mb-2">
-            <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${dip.title}</h4>
-            <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${dip.school} | ${dip.date}</div>
-            </div>
-            <div class="item-content">
-            ${dip.stack ? `
-                <p class="m-0" style="color: #54B689; font-size: .8rem;">${dip.stack.join(' | ')}</p>
-            ` : ''}
-            ${dip.description ? `
-                <p class="mb-1">${dip.description}</p>
-            ` : ''}
-            ${dip.tasks.length > 0 ? `
-            <ul class="resume-list">
-                ${dip.tasks.map(task => `<li>${task}</li>`).join('')}
-            </ul>
-            ` : ''}
-            </div>
-            ${dip.hr ? '<hr>' : ''}
-        `;
-        diplomeList.appendChild(item);
-    }
-    )
-}
-
-
+const projects = [
+    {
+        title: "V'Lille GCP ETL",
+        description: "ETL de l'état des stations V'Lille sur GCP",
+        stack: ["GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Flask", "Docker", "Javascript", "Google Maps API"],
+        github: "https://github.com/yzpt/vlille_gcp",
+        demo: "https://vlille-v1-app-service-dxpal7wuuq-od.a.run.app/",
+        images: [
+            "assets/images/diagram_vlille.svg",
+            "assets/images/flask_dashboard.png",
+        ],
+    },
+    {
+        title: "Data Engineering projects",
+        description: 
+        "Spark + Kafka + Cassandra Streaming Pipeline<br>" +
+        "Airflow to Postgres / GCP Composer to BigQuery<br>" +
+        "Spark Operator on Kubernetes<br>" +
+        "Kafka : KRaft mode<br>" +
+        "GCP Dataflow & BigQuery, fuel prices<br>" +
+        "Websocket Streaming to GCP Pub/Sub<br>" +
+        "SASL/PLAIN and ACLs on Kafka",
+        stack: ["Spark", "Kafka", "Airflow", "Postgresql", "Cassandra", "Docker", "GCP"],
+        github: "https://github.com/yzpt/docker_cluster_streaming",
+        images: [
+            "assets/images/docker_streaming.png",
+        ],
+        demo: "",
+    },
+    {
+        title: "Analyses et reporting automatisés",
+        description: "Extraits du projet KXI Wildertech d'analyse automatisée de séries temporelles et de reporting en ligne",
+        stack: ["Jupyter", "Flask", "Plotly", "Leaflet", "GCP", "Matplotlib"],
+        images: [
+            "assets/images/mdf1b.png",
+            "assets/images/mdf3.png",
+            // "assets/images/mdf4.png",
+            // "assets/images/mdf2.png",
+        ],
+    },
+    {
+        title: "Geolife GPS Tracking",
+        description: "Visualisation de trackings GPS du dataset Geolife",
+        stack: ["Dash", "Plotly", "GeoPandas", "Scikit-Learn"],
+        images: [
+            "assets/images/geolife_dash1.png",
+            // "assets/images/geolife_dash2.png",
+        ],
+        github: "https://github.com/yzpt/geolife",
+        demo: "https://geolife-service-883336909258.europe-west9.run.app/",
+    },
+    {
+        title: "Imagerie satellite (Sentinel) avec Google Earth Engine",
+        description: "Estimation de la végétation du Nord-Pas-de-Calais",
+        stack: ["Google Earth Engine", "Jupyter"],
+        images: [
+            "assets/images/sentinel2.png",
+        ],
+        github: "https://github.com/yzpt/gee",
+    },
+    {
+        title: "Dashboards divers",
+        description: "",
+        stack: ["Dash", "Plotly", "GeoPandas"],
+        images: [
+            "assets/images/historic_dashboard_ongoing.png",
+            "assets/images/population_mapping_ongoing.png",
+        ],
+    },
+    {
+        title: "Zapmaths",
+        description: "Application web d'entraînement aux calculs",
+        stack: ["Python", "Php", "MySQL", "Apache", "Excel"],
+        images: [
+            "assets/images/zapmaths1.png",
+            "assets/images/zapmaths2.png",
+        ],
+        github: "https://github.com/ypzt/zapmaths",
+    },
+]
 
 
 const formations = [
@@ -355,40 +245,4 @@ const formations = [
 ]
 
 
-renderFormations = () => {
-    const formationList = document.getElementById("formation-list");
-
-    formations.forEach(form => {
-        const item = document.createElement("div");
-        item.classList.add("item", "mb-3");
-
-        item.innerHTML = `
-            ${form.hr ? '<hr>' : ''}
-            <div class="item-heading row align-items-center mb-2">
-                <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${form.title}</h4>
-                <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${form.school} | ${form.date}</div>
-            </div>
-        `;
-        formationList.appendChild(item);
-    }
-    )
-}
-
-
-
-
-
-
-
-
-
-
-
-// Call the function to render experiences when the page loads
-window.onload = () => {
-    renderExperiences();
-    renderDiplomes();
-    renderIntroduction();
-    // renderFormations();
-    renderProjects();
-};
+export { introduction, experiences, diplomes, projects, formations };
