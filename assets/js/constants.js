@@ -169,18 +169,22 @@ const projects = [
     {
         title: "Data Engineering projects",
         description: 
-        "Série de projets orientés Data Engineering afin de prendre en main certains outils phares du domaine.<br><br>" +
-        "Spark + Kafka + Cassandra Streaming Pipeline<br>" +
-        "Airflow to Postgres / GCP Composer to BigQuery<br>" +
-        "Spark Operator on Kubernetes<br>" +
-        "Kafka : KRaft mode<br>" +
-        "GCP Dataflow & BigQuery, fuel prices<br>" +
-        "Websocket Streaming to GCP Pub/Sub<br>" +
-        "SASL/PLAIN and ACLs on Kafka",
+        "Série de projets orientés Data Engineering afin de prendre en main certains outils phares du domaine.<br><br>",
+        tasks: [
+            "Spark + Kafka + Cassandra Streaming Pipeline<br>",
+            "Airflow to Postgres / GCP Composer to BigQuery<br>",
+            "Spark Operator on Kubernetes<br>",
+            "Kafka : KRaft mode<br>",
+            "GCP Dataflow & BigQuery, fuel prices<br>",
+            "Websocket Streaming to GCP Pub/Sub<br>",
+            "SASL/PLAIN and ACLs on Kafka",
+        ],
         stack: ["Spark", "Kafka", "Airflow", "Postgresql", "Cassandra", "Docker", "GCP"],
         github: "https://github.com/yzpt/docker_cluster_streaming",
         images: [
-            "assets/images/docker_streaming.png",
+            // "assets/images/docker_streaming.png",
+            "assets/images/streaming_and_airflow.png",
+            "assets/images/dag_screen.png"
         ],
         demo: "",
     },

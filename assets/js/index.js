@@ -91,6 +91,7 @@ const renderProjects = () => {
                                         </p>
                                     </a>
                                 ` : ''}
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -131,7 +132,6 @@ const renderProjects = () => {
                                     </p>
                                 </a>
                             ` : ''}
-                        </p>
                     </div>
                     
                     <div class="row mt-2">
