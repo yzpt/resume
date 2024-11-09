@@ -75,16 +75,22 @@ const renderProjects = () => {
                                 <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
                             ` : ''}
                             <p class="mb-0">${project.description}</p>
-                            ${project.github ? `
-                                <a href="${project.github}" target="_blank">
-                                    <p class="m-1" style="color: #54B689; font-size: .8rem;">Github</p>
-                                </a>
-                            ` : ''}
-                            ${project.demo ? `
-                                <a href="${project.demo}" target="_blank">
-                                    <p class="m-1" style="color: #54B689; font-size: .8rem;">Demo</p>
-                                </a>
-                            ` : ''}
+                            
+                            <div class="d-flex" style="width: 100%; justify-content: start;">
+                                ${project.github ? `
+                                    <a href="${project.github}" target="_blank">
+                                        <p class="m-1" style="color: #54B689; font-size: .8rem;">
+                                            <i class="fab fa-github"></i> Github
+                                        </p>
+                                    </a>
+                                ` : ''}
+                                ${project.demo ? `
+                                    <a href="${project.demo}" target="_blank">
+                                        <p class="m-1" style="color: #54B689; font-size: .8rem;">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </p>
+                                    </a>
+                                ` : ''}
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -105,17 +111,29 @@ const renderProjects = () => {
                         <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
                     ` : ''}
                     <p class="mb-0">${project.description}</p>
-                    ${project.github ? `
-                        <a href="${project.github}" target="_blank">
-                            <p class="m-1" style="color: #54B689; font-size: .8rem;">Github</p>
-                        </a>
+                    ${project.tasks ? `
+                        <ul class="resume-list">
+                            ${project.tasks.map(task => `<li>${task}</li>`).join('')}
+                        </ul>
                     ` : ''}
-                    ${project.demo ? `
-                        <a href="${project.demo}" target="_blank">
-                            <p class="m-1" style="color: #54B689; font-size: .8rem;">Demo</p>
-                        </a>
-                    ` : ''}
-                    <div class="d-flex justify-content-between"></div>
+                    <div class="d-flex" style="width: 100%; justify-content: start;">
+                            ${project.github ? `
+                                <a href="${project.github}" target="_blank">
+                                    <p class="m-1" style="color: #54B689; font-size: .8rem;">
+                                        <i class="fab fa-github"></i> Github
+                                    </p>
+                                </a>
+                            ` : ''}
+                            ${project.demo ? `
+                                <a href="${project.demo}" target="_blank">
+                                    <p class="m-1" style="color: #54B689; font-size: .8rem;">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </p>
+                                </a>
+                            ` : ''}
+                        </p>
+                    </div>
+                    
                     <div class="row mt-2">
                         ${project.images.map(img => `
                             <div class="col-12 col-md-6 mb-3">

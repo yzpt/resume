@@ -7,13 +7,14 @@ const experiences = [
     {
         title: "Data Analyst / Développeur Python",
         company: "Kooling.io (EN)",
-        date: "Septembre 2024 - aujourd'hui",
+        date: "Septembre - Novembre 2024",
         tasks: [
-            "Analyse de tracking GPS & développement d'algorithmes de détection automatique de mode de transport",
-            "Déploiement de plusieurs tableaux de bord de visualisation de données et analyses automatisées paramétrées (STDBSCAN, segmentation, tracking features, évaluation d'algorithmes)",
+            "Développement d'algorithmes de tracking GPS : segmentation, détection de mode de transport",
+            "Dashboards de visualisation des évaluations de performances des algorithmes",
+            "Conception d'un prototype de tracker GPS - EPS32 - Neo6M (GPS) - Sim800L (GSM)",
         ],
         description: "",
-        stack: ["Pandas", "Dash", "Plotly", "Postgresql", "C++", "MicroPython", "Scikit-Learn"],
+        stack: ["Pandas", "Scikit-Learn", "Dash", "Plotly", "Postgresql", "C++", "MicroPython"],
     },
     {
         title: "Développeur Python",
@@ -23,19 +24,7 @@ const experiences = [
             "Développement d'un dashboard de consultation d'articles historiques",
             "Timelines par auteurs, cartographie des articles, édition des données en ligne"
         ],
-        stack: ["Pandas", "Dash", "Plotly", "Docker", "GCP Cloud Run"],
-    },
-    {
-        title: "Développeur Python / Data Analyst",
-        company: "KXI Wildertech (CAN)",
-        date: "Juin - Juillet 2024",
-        tasks: [
-            "Analyse automatisée de de séries temporelles issues d'une batterie de capteurs (format MDF4) implentés dans des véhicules de tests",
-            "Traitement de signal automatisé (détection et caractérisation des virages, compressions de suspensions limites, positionnement GPS des détections, tangage, etc.)",
-            "Déploiement d'une application web permettant un reporting automatisé",
-        ],
-        description: "",
-        stack: ["Pandas", "Flask", "Plotly", "Leaflet", "Jupyter", "Matplotlib", "GCP", "BigQuery"],
+        stack: ["Pandas", "Dash", "Plotly", "Docker", "GCP Cloud Run", "GCP Storage"],
     },
     {
         title: "Software engineer",
@@ -43,11 +32,21 @@ const experiences = [
         date: "Juillet - Août 2024",
         tasks: [
             "Développement de fonctionnalités diverses d'une application RAG/LLM avec FastAPI",
-            "Application des principes SOLID",
-            "Développement des tests unitaires avec pyTest"
+            "pytest et application des principes SOLID",
         ],
         description: "",
         stack: ["FastAPI", "pytest", "Docker", "PostgreSQL", "Chroma"],
+    },
+    {
+        title: "Développeur Python / Data Analyst",
+        company: "KXI Wildertech (CAN)",
+        date: "Juin - Juillet 2024",
+        tasks: [
+            "Traitement de signal automatisé de capteurs (format MDF4) implentés dans des voitures de tests",
+            "Développement d'une application de reporting automatisé, de visualisation de données et de cartographie",
+        ],
+        description: "",
+        stack: ["Pandas", "Jupyter", "Flask", "Leaflet", "Matplotlib", "Plotly", "GCP", "BigQuery"],
     },
     {
         title: "Data Analyst",
@@ -56,8 +55,7 @@ const experiences = [
         tasks: [
             "Traitement, analyse et visualisation de trackings GPS issues de données MPD (Mobile Positionning Data) pour définir les tendances de mobilité dans une grande ville française",
             "Déploiement de dashboards de visualisation de données et d'analyses automatisées",
-            "Développement d'algorithmes de détection de mode de transport",
-            "Littérature scientifique : <a href='allo'>Paria Sadeghian</a> et Yu Zheng"
+            "Développement d'algorithmes de détection de mode de transport inspirés par la littérature scientifique, principalement <a href='allo'>Paria Sadeghian</a> et Yu Zheng"
         ],
         description: "",
         stack: ["GeoPandas", "Leaflet", "Javascript", "OpenStreetMap", "GeoPy", "Scikit-Learn", "Flask", "Docker", "Dash", "Plotly", "GCP Cloud Run", "GCP BigQuery"],
@@ -152,10 +150,17 @@ const diplomes = [
 const projects = [
     {
         title: "V'Lille GCP ETL",
-        description: "ETL de l'état des stations V'Lille sur GCP",
-        stack: ["GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Flask", "Docker", "Javascript", "Google Maps API"],
+        description: "",
+        stack: ["GCP : CLI, BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Bash", "Flask", "Docker", "Javascript", "Google Maps API"],
         github: "https://github.com/yzpt/vlille_gcp",
         demo: "https://vlille-v1-app-service-dxpal7wuuq-od.a.run.app/",
+        tasks: [
+            "ETL qui récupère les <a href='https://data.lillemetropole.fr/geoserver/wfs?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=dsp_ilevia%3Avlille_temps_reel&OUTPUTFORMAT=application%2Fjson'>données des stations V'Lille via l'API publique</a> chaque minute via Cloud Functions et les stocke dans BigQuery & Storage.",
+            "Démonstration d'un job Spark avec GCP Dataproc.",
+            "Font-end: HTML/CSS/Javascript (+Chart.js) et Google Maps API.",
+            "Back-end: Flask & BigQuery client.",
+            "Déploiement : Docker & GCP Cloud Run.",
+        ],
         images: [
             "assets/images/diagram_vlille.svg",
             "assets/images/flask_dashboard.png",
@@ -164,6 +169,7 @@ const projects = [
     {
         title: "Data Engineering projects",
         description: 
+        "Série de projets orientés Data Engineering afin de prendre en main certains outils phares du domaine.<br><br>" +
         "Spark + Kafka + Cassandra Streaming Pipeline<br>" +
         "Airflow to Postgres / GCP Composer to BigQuery<br>" +
         "Spark Operator on Kubernetes<br>" +
@@ -180,13 +186,11 @@ const projects = [
     },
     {
         title: "Analyses et reporting automatisés",
-        description: "Extraits du projet KXI Wildertech d'analyse automatisée de séries temporelles et de reporting en ligne",
+        description: "Extraits de la mission chez KXI Wildertech d'analyse automatisée de séries temporelles et de reporting en ligne",
         stack: ["Jupyter", "Flask", "Plotly", "Leaflet", "GCP", "Matplotlib"],
         images: [
             "assets/images/mdf1b.png",
             "assets/images/mdf3.png",
-            // "assets/images/mdf4.png",
-            // "assets/images/mdf2.png",
         ],
     },
     {
@@ -201,7 +205,7 @@ const projects = [
         demo: "https://geolife-service-883336909258.europe-west9.run.app/",
     },
     {
-        title: "Imagerie satellite (Sentinel) avec Google Earth Engine",
+        title: "Introduction à l'imagerie satellite (Sentinel-2) avec Google Earth Engine",
         description: "Estimation de la végétation du Nord-Pas-de-Calais",
         stack: ["Google Earth Engine", "Jupyter"],
         images: [
