@@ -94,13 +94,13 @@ const experiences = [
         hr: true,
     },
     {
-        title: "Ingénieur de recherche au CNRS, opto-électronique et imagerie TeraHertz",
+        title: "Ingénieur de recherche",
         company: "IEMN : Institut d’Electronique, de Micro-électronique et Nanotechnologies, Villeneuve-d’Ascq",
         date: "2013 - 2015",
         description: "",
         hr: true,
         tasks: [
-            "Mise en place et programmation de bancs de mesures caractérisation de dispositifs THz",
+            "Mise en place et programmation de bancs de mesures & caractérisations de dispositifs THz",
             "Imagerie THz, cartographies spectrales de wafers"
         ],
         stack: ["LabView", "Matlab", "Python", "Electronique hyperfréquences", "Opto-électronique THz", "Métamatériaux"],
