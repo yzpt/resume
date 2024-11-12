@@ -13950,7 +13950,7 @@ a.theme-link:hover {
 
 .resume-wrapper {
    border: 1px solid rgba(0, 0, 0, 0.025);
-   max-width: 800px;
+   /* max-width: 800px; */
 }
 
 .resume-section-heading {
