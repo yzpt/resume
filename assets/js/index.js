@@ -1,4 +1,5 @@
-import { introduction, experiences, diplomes, projects, formations, stacklist } from './constants.js';
+import { introduction, experiences, diplomes, projects, formations, stacklist } from './fr.js';
+// en.js -> english version
 
 
 const renderProjects = () => {
@@ -17,7 +18,7 @@ const renderProjects = () => {
                         </div>
                         <div class="item-content">
                             ${project.stack ? `
-                                <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
+                                <p class="m-0 mb-1" style="color: #34a853; font-size: .8rem;">${project.stack.join(' | ')}</p>
                             ` : ''}
                             <p class="mb-0">${project.description}</p>
                             
@@ -54,7 +55,7 @@ const renderProjects = () => {
                 </div>
                 <div class="item-content">
                     ${project.stack ? `
-                        <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
+                        <p class="m-0 mb-1" style="color: #34a853; font-size: .8rem;">${project.stack.join(' | ')}</p>
                     ` : ''}
                     <p class="mb-0">${project.description}</p>
                     ${project.tasks ? `
@@ -111,13 +112,13 @@ const renderExperiences = () => {
 
         item.innerHTML = `
             ${exp.hr ? '<hr>' : ''}
-            <div class="item-heading row align-items-center mb-2">
+            <div class="item-heading row align-items-center mb-0">
                 <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">${exp.title}</h4>
                 <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-start text-md-end">${exp.company} | ${exp.date}</div>
             </div>
             <div class="item-content">
                 ${exp.stack ? `
-                    <p class="m-0" style="color: #54B689; font-size: .8rem;">${exp.stack.join(' | ')}</p>
+                    <p class="m-0" style="color: #34a853; font-size: .8rem;">${exp.stack.join(' | ')}</p>
                 ` : ''}
                 ${exp.description != undefined ? `
                 <p class="mb-1">${exp.description}</p>
@@ -142,13 +143,13 @@ const renderDiplomes = () => {
         item.classList.add("item", "mb-3");
 
         item.innerHTML = `
-            <div class="item-heading row align-items-center mb-2">
+            <div class="item-heading row align-items-center mb-0">
             <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${dip.title}</h4>
             <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${dip.school} | ${dip.date}</div>
             </div>
             <div class="item-content">
             ${dip.stack ? `
-                <p class="m-0" style="color: #54B689; font-size: .8rem;">${dip.stack.join(' | ')}</p>
+                <p class="m-0" style="color: #34a853; font-size: .8rem;">${dip.stack.join(' | ')}</p>
             ` : ''}
             ${dip.description ? `
                 <p class="mb-1">${dip.description}</p>
@@ -176,7 +177,7 @@ const renderFormations = () => {
 
         item.innerHTML = `
             ${form.hr ? '<hr>' : ''}
-            <div class="item-heading row align-items-center mb-2">
+            <div class="item-heading row align-items-center mb-0">
                 <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${form.title}</h4>
                 <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${form.school} | ${form.date}</div>
             </div>
@@ -198,9 +199,10 @@ const renderIntroduction = () => {
 
             introductionList.appendChild(item);
         });
-    } else {
-        console.error("Element with id 'introduction-list' not found");
     }
+    // } else {
+    //     console.error("Element with id 'introduction-list' not found");
+    // }
 };
 
 const renderStack = () => {
@@ -209,7 +211,7 @@ const renderStack = () => {
     stacklist.forEach(item => {
         const stackItem = document.createElement("div");
         stackItem.innerHTML = `
-            <p class="m-1 text">${item}</p>
+            <p class="m-0 text">${item}</p>
         `
 
         stackList.appendChild(stackItem);

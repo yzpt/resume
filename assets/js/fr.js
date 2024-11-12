@@ -1,6 +1,6 @@
 const introduction = [
-    "Je code depuis l'âge de 10 ans et me forme sur Python et la data après une carrière de professeur de mathématiques.",
-    "J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst",
+    "Ancien professeur de mathématiques, ingénieur de formation, je me concentre aujourd'hui sur Python et la data, animé par le goût de l'analyse et d'une forte capacité de résolution de problèmes que je développe à travers le code depuis l'âge de 10 ans.",
+    "J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst.",
 ]
 
 const stacklist = [
@@ -10,7 +10,7 @@ const stacklist = [
     "Flask, FastAPI, Docker, Git",
     "Spark, Kafka, Airflow, Postgresql, MySQL, Cassandra, SQLAlchemy",
     "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy, QGIS",
-    "J'apprends : React, Django, Kubernetes",
+    "J'apprends : React, Django, SOLID & TDD",
 ]
 
 
@@ -33,7 +33,6 @@ const experiences = [
         date: "Novembre 2024",
         tasks: [
             "Développement d'un dashboard de consultation d'articles historiques",
-            "Timelines par auteurs, cartographie des articles, édition des données en ligne"
         ],
         stack: ["Pandas", "Dash", "Plotly", "Docker", "GCP Cloud Run", "GCP Storage"],
     },
@@ -43,8 +42,7 @@ const experiences = [
         date: "Juillet - Août 2024",
         tasks: [
             "Développement de fonctionnalités diverses d'une application RAG/LLM avec FastAPI",
-            "Pytest: tests unitaires et d'intégration",
-            "Application des principes SOLID",
+            "Tests unitaires et d'intégration avec pytest",
         ],
         description: "",
         stack: ["FastAPI", "pytest", "Docker", "PostgreSQL", "Chroma"],
@@ -67,7 +65,7 @@ const experiences = [
         tasks: [
             "Traitement, analyse et visualisation de trackings GPS issues de données MPD (Mobile Positionning Data) pour définir les tendances de mobilité dans une grande ville française",
             "Déploiement de dashboards de visualisation de données et d'analyses automatisées",
-            "Développement d'algorithmes de détection de mode de transport inspirés par la littérature scientifique, principalement <a href='allo'>Paria Sadeghian</a> et Yu Zheng : segmentation, clusterisation (ST-DBSCAN & K-Means), mappage des tracés sur OpenStreetMap pour détection des transports publics",
+            "Développement d'algorithmes de détection de mode de transport inspirés par la littérature scientifique, principalement <a href='https://www.scopus.com/authid/detail.uri?authorId=57216741721'>Paria Sadeghian</a> et <a href='https://www.scopus.com/authid/detail.uri?authorId=56382645500'>Yu Zheng</a> : segmentation, clusterisation (ST-DBSCAN & K-Means), mappage des tracés sur OpenStreetMap pour détection des transports publics",
             "Tendances de mobilité : matrice Origin-Destination, heatmaps paramétrées",
         ],
         description: "",
@@ -164,16 +162,25 @@ const projects = [
     {
         title: "V'Lille GCP ETL",
         description: "",
-        stack: ["GCP : CLI, BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Spark", "Flask", "Docker", "Javascript", "Google Maps API"],
+        stack: ["GCP : CLI, BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run", "Bash", "Flask", "Docker", "Javascript", "Google Maps API"],
         github: "https://github.com/yzpt/vlille_gcp",
         demo: "https://vlille-v1-app-service-dxpal7wuuq-od.a.run.app/",
-        tasks: [
-            "ETL qui récupère les <a href='https://data.lillemetropole.fr/geoserver/wfs?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=dsp_ilevia%3Avlille_temps_reel&OUTPUTFORMAT=application%2Fjson'>données des stations V'Lille via l'API publique</a> chaque minute via Cloud Functions et les stocke dans BigQuery & Storage.",
-        ],
+        description: "ETL qui récupère les <a href='https://data.lillemetropole.fr/geoserver/wfs?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAMES=dsp_ilevia%3Avlille_temps_reel&OUTPUTFORMAT=application%2Fjson'>données des stations V'Lille depuis l'API publique</a> chaque minute via Cloud Functions et les stocke dans BigQuery & Storage.",
         images: [
             "assets/images/diagram_vlille.svg",
             "assets/images/flask_dashboard.png",
         ],
+    },
+    {
+        title: "Geolife GPS Tracking",
+        description: "Visualisation de trackings GPS du dataset Geolife",
+        stack: ["Dash", "Plotly", "GeoPandas", "Scikit-Learn"],
+        images: [
+            "assets/images/geolife_dash1.png",
+            // "assets/images/geolife_dash2.png",
+        ],
+        github: "https://github.com/yzpt/geolife",
+        demo: "https://geolife-service-883336909258.europe-west9.run.app/",
     },
     {
         title: "Data Engineering projects",
@@ -205,17 +212,6 @@ const projects = [
             "assets/images/mdf1b.png",
             "assets/images/mdf3.png",
         ],
-    },
-    {
-        title: "Geolife GPS Tracking",
-        description: "Visualisation de trackings GPS du dataset Geolife",
-        stack: ["Dash", "Plotly", "GeoPandas", "Scikit-Learn"],
-        images: [
-            "assets/images/geolife_dash1.png",
-            // "assets/images/geolife_dash2.png",
-        ],
-        github: "https://github.com/yzpt/geolife",
-        demo: "https://geolife-service-883336909258.europe-west9.run.app/",
     },
     {
         title: "Introduction à l'imagerie satellite (Sentinel-2) avec Google Earth Engine",
