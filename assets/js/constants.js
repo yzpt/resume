@@ -1,5 +1,5 @@
 const introduction = [
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat",
+    "Je code depuis l'âge de 10 ans et me forme sur Python en m'orientant Data Analyst/Engineer/Scientist. J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst et cherche aujourd'hui à intégrer une structure Lilloise afin de monter en compétences."
 ]
 
 
@@ -7,7 +7,7 @@ const experiences = [
     {
         title: "Data Analyst / Développeur Python",
         company: "Kooling.io (EN)",
-        date: "Septembre - Novembre 2024",
+        date: "Septembre 2024 - aujourd'hui",
         tasks: [
             "Développement d'algorithmes de tracking GPS : segmentation, détection de mode de transport",
             "Dashboards de visualisation des évaluations de performances des algorithmes",
@@ -32,7 +32,8 @@ const experiences = [
         date: "Juillet - Août 2024",
         tasks: [
             "Développement de fonctionnalités diverses d'une application RAG/LLM avec FastAPI",
-            "pytest et application des principes SOLID",
+            "Pytest: tests unitaires et d'intégration",
+            "Application des principes SOLID",
         ],
         description: "",
         stack: ["FastAPI", "pytest", "Docker", "PostgreSQL", "Chroma"],
@@ -55,7 +56,8 @@ const experiences = [
         tasks: [
             "Traitement, analyse et visualisation de trackings GPS issues de données MPD (Mobile Positionning Data) pour définir les tendances de mobilité dans une grande ville française",
             "Déploiement de dashboards de visualisation de données et d'analyses automatisées",
-            "Développement d'algorithmes de détection de mode de transport inspirés par la littérature scientifique, principalement <a href='allo'>Paria Sadeghian</a> et Yu Zheng"
+            "Développement d'algorithmes de détection de mode de transport inspirés par la littérature scientifique, principalement <a href='allo'>Paria Sadeghian</a> et Yu Zheng : segmentation, clusterisation (ST-DBSCAN & K-Means), mappage des tracés sur OpenStreetMap pour détection des transports publics",
+            "Tendances de mobilité : matrice Origin-Destination, heatmaps paramétrées",
         ],
         description: "",
         stack: ["GeoPandas", "Leaflet", "Javascript", "OpenStreetMap", "GeoPy", "Scikit-Learn", "Flask", "Docker", "Dash", "Plotly", "GCP Cloud Run", "GCP BigQuery"],
@@ -171,16 +173,16 @@ const projects = [
         description: 
         "Série de projets orientés Data Engineering afin de prendre en main certains outils phares du domaine.<br><br>",
         tasks: [
-            "Spark + Kafka + Cassandra Streaming Pipeline<br>",
-            "Airflow to Postgres / GCP Composer to BigQuery<br>",
-            "Spark Operator on Kubernetes<br>",
-            "Kafka : KRaft mode<br>",
-            "GCP Dataflow & BigQuery, fuel prices<br>",
-            "Websocket Streaming to GCP Pub/Sub<br>",
-            "SASL/PLAIN and ACLs on Kafka",
+            "<a href='https://github.com/yzpt/docker_cluster_streaming'>Spark + Kafka + Cassandra Streaming Pipeline</a><br>",
+            "<a href='https://github.com/yzpt/airflow_carburants'>Airflow to Postgres / GCP Composer to BigQuery</a><br>",
+            "<a href='https://github.com/yzpt/websocket_to_gcp_pubsub'>Websocket to GCP Pub/Sub</a><br>",
+            "<a href='https://github.com/yzpt/dataflow_carburants'>GCP Dataflow & BigQuery, fuel prices</a><br>",
+            "<a href='https://github.com/yzpt/kafka_kraft'>Kafka KRaft mode</a><br>",
+            "<a href='https://github.com/yzpt/upw_test_kafka_spark_docker'>SASL/PLAIN and ACLs on Kafka",
+            "<a href='https://github.com/yzpt/upw_test_kafka_spark_docker'>Kafka + Spark + Docker</a><br>",
+            "<a href='https://github.com/yzpt/spark_on_kubernetes'>Spark on Kubernetes</a><br>",
         ],
         stack: ["Spark", "Kafka", "Airflow", "Postgresql", "Cassandra", "Docker", "GCP"],
-        github: "https://github.com/yzpt/docker_cluster_streaming",
         images: [
             // "assets/images/docker_streaming.png",
             "assets/images/streaming_and_airflow.png",
