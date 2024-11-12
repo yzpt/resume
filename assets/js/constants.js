@@ -1,5 +1,16 @@
 const introduction = [
-    "Je code depuis l'âge de 10 ans et me forme sur Python en m'orientant Data Analyst/Engineer/Scientist. J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst et cherche aujourd'hui à intégrer une structure Lilloise afin de monter en compétences."
+    "Je code depuis l'âge de 10 ans et me forme sur Python orienté Data.",
+    "J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst",
+    "Je cherche aujourd'hui à intégrer une structure Lilloise."
+]
+
+const stacklist = [
+    "Python, SQL, Linux, Bash, Javascript",
+    "Juypyter, Pandas, Plotly, Dash, Scikit-Learn, Matplotlib/Seaborn, Panel/Holoviz",
+    "GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run",
+    "Spark, Kafka, Airflow, Postgresql, MySQL, Cassandra, SQLAlchemy",
+    "Flask, FastAPI, Docker, Git",
+    "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy, QGIS",
 ]
 
 
@@ -89,7 +100,7 @@ const experiences = [
         tasks: [
             "Enseignant de mathématiques et sciences physiques en lycée professionnel",
             "Elèves en scolarité adaptée (classes de CAP, 3PM, post-ULIS/SEGPA, Allophones)",
-            "Développement d’une application web d’entraînement aux calculs. (ZapMaths)",
+            "Développement d’une application web d’entraînement aux calculs",
             "Apprentissage de la programmation en Python & Arduino",
             "Création d'une chaîne YouTube de tutoriels de mathématiques",
         ],
@@ -247,12 +258,7 @@ const formations = [
         school: "AFPA Roubaix",
         date: "Janvier - Mai 2023",
     },
-    {
-        title: "DU/M1 Master MEEF Mathématiques",
-        school: "IUFM/ESPE/INSPE de Villeneuve d'Ascq",
-        date: "2016 - 2018",
-    },
 ]
 
 
-export { introduction, experiences, diplomes, projects, formations };
+export { introduction, experiences, diplomes, projects, formations, stacklist };

@@ -1,60 +1,5 @@
-// experiences.js
+import { introduction, experiences, diplomes, projects, formations, stacklist } from './constants.js';
 
-import { introduction, experiences, diplomes, projects, formations } from './constants.js';
-
-// const renderProjects = () => {
-//     const projectList = document.getElementById("projects-list");
-
-//     projects.forEach(project => {
-//         const item = document.createElement("div");
-//         item.classList.add("item", "mb-1");
-
-//         if (project.images.length === 1) {
-//             item.innerHTML = `
-//                 <div class="row">
-//                     <div class="col-md-6">
-//                         <div class="item-heading row align-items-center mb-0">
-//                             <h4 class="item-title col-12 mb-0">${project.title}</h4>
-//                         </div>
-//                         <div class="item-content">
-//                             ${project.stack ? `
-//                                 <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
-//                             ` : ''}
-//                             <p class="mb-0">${project.description}</p>
-//                         </div>
-//                     </div>
-//                     <div class="col-md-6">
-//                         <img src="${project.images[0]}" class="img-fluid" alt="project image">
-//                     </div>
-//                 </div>
-//                 <hr>
-//             `;
-//         } else {
-//             item.innerHTML = `
-//                 <div class="item-heading row align-items-center mb-0">
-//                     <h4 class="item-title col-12 mb-0">${project.title}</h4>
-//                 </div>
-//                 <div class="item-content">
-//                     ${project.stack ? `
-//                         <p class="m-0 mb-1" style="color: #54B689; font-size: .8rem;">${project.stack.join(' | ')}</p>
-//                     ` : ''}
-//                     <p class="mb-0">${project.description}</p>
-//                     <div class="d-flex justify-content-between"></div>
-//                     <div class="row mt-2">
-//                         ${project.images.map(img => `
-//                             <div class="col-12 col-md-6 mb-3">
-//                                 <img src="${img}" class="img-fluid" alt="project image">
-//                             </div>
-//                         `).join('')}
-//                     </div>
-//                 </div>
-//                 <hr>
-//             `;
-//         }
-
-//         projectList.appendChild(item);
-//     });
-// };
 
 const renderProjects = () => {
     const projectList = document.getElementById("projects-list");
@@ -154,22 +99,7 @@ const renderProjects = () => {
 };
 
 
-const renderIntroduction = () => {
-    const introductionList = document.getElementById("introduction-list");
 
-    if (introductionList) {
-        introduction.forEach(intro => {
-            const item = document.createElement("div");
-            item.innerHTML = `
-                <p class="mb-1">${intro}</p>
-            `;
-
-            introductionList.appendChild(item);
-        });
-    } else {
-        console.error("Element with id 'introduction-list' not found");
-    }
-};
 
 
 const renderExperiences = () => {
@@ -237,24 +167,57 @@ const renderDiplomes = () => {
 }
 
 
-// renderFormations = () => {
-//     const formationList = document.getElementById("formation-list");
+const renderFormations = () => {
+    const formationList = document.getElementById("formation-list");
 
-//     formations.forEach(form => {
-//         const item = document.createElement("div");
-//         item.classList.add("item", "mb-3");
+    formations.forEach(form => {
+        const item = document.createElement("div");
+        item.classList.add("item", "mb-3");
 
-//         item.innerHTML = `
-//             ${form.hr ? '<hr>' : ''}
-//             <div class="item-heading row align-items-center mb-2">
-//                 <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${form.title}</h4>
-//                 <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${form.school} | ${form.date}</div>
-//             </div>
-//         `;
-//         formationList.appendChild(item);
-//     }
-//     )
-// }
+        item.innerHTML = `
+            ${form.hr ? '<hr>' : ''}
+            <div class="item-heading row align-items-center mb-2">
+                <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${form.title}</h4>
+                <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${form.school} | ${form.date}</div>
+            </div>
+        `;
+        formationList.appendChild(item);
+    }
+    )
+}
+
+const renderIntroduction = () => {
+    const introductionList = document.getElementById("introduction-list");
+
+    if (introductionList) {
+        introduction.forEach(intro => {
+            const item = document.createElement("div");
+            item.innerHTML = `
+                <p class="mb-1">${intro}</p>
+            `;
+
+            introductionList.appendChild(item);
+        });
+    } else {
+        console.error("Element with id 'introduction-list' not found");
+    }
+};
+
+const renderStack = () => {
+    const stackList = document.getElementById("stack-list");
+
+    stacklist.forEach(item => {
+        const stackItem = document.createElement("div");
+        stackItem.innerHTML = `
+            <p class="m-1 text">${item}</p>
+        `
+
+        stackList.appendChild(stackItem);
+    }
+    )
+}
+        
+        
 
 
 // Call the function to render experiences when the page loads
@@ -264,4 +227,5 @@ window.onload = () => {
     renderIntroduction();
     // renderFormations();
     renderProjects();
+    renderStack();
 };
