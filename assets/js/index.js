@@ -194,7 +194,7 @@ const renderIntroduction = () => {
         introduction.forEach(intro => {
             const item = document.createElement("div");
             item.innerHTML = `
-                <p class="mb-1">${intro}</p>
+                <p class="mb-2">${intro}</p>
             `;
 
             introductionList.appendChild(item);
@@ -211,7 +211,7 @@ const renderStack = () => {
     stacklist.forEach(item => {
         const stackItem = document.createElement("div");
         stackItem.innerHTML = `
-            <p class="m-0 text">${item}</p>
+            <p class="m-0 text" style="font-size: .8rem;">${item}</p>
         `
 
         stackList.appendChild(stackItem);

@@ -1,5 +1,5 @@
 const introduction = [
-    "Ancien professeur de mathématiques, ingénieur de formation, je me concentre aujourd'hui sur Python et la data, animé par le goût de l'analyse et d'une forte capacité de résolution de problèmes que je développe à travers le code depuis l'âge de 10 ans.",
+    "Avec un background de professeur de mathématiques certifié et d'ingénieur de recherche, je me concentre aujourd'hui sur Python et la data, animé par le goût de l'analyse et d'une forte capacité de résolution de problèmes que je développe à travers le code depuis l'âge de 10 ans.",
     "J'effectue des missions en freelance depuis ce printemps en me spécialisant GIS Analyst.",
 ]
 
@@ -9,8 +9,8 @@ const stacklist = [
     "GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run",
     "Flask, FastAPI, Docker, Git",
     "Spark, Kafka, Airflow, Postgresql, MySQL, Cassandra, SQLAlchemy",
-    "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy, QGIS",
-    "J'apprends : React, Django, SOLID & TDD",
+    "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy",
+    "J'apprends : React, Django, QGIS, clean-code, principes SOLID & TDD",
 ]
 
 
