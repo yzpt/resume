@@ -1,6 +1,6 @@
 const introduction = [
     "Avec un background de professeur de mathématiques certifié et d'ingénieur de recherche, je me concentre aujourd'hui sur Python et la data, animé par le goût de l'analyse et d'une forte capacité de résolution de problèmes que je développe à travers le code depuis l'âge de 10 ans.",
-    "<b>Je réalise des missions en freelance depuis ce printemps et souhaite désormais monter en compétences en occupant un poste basé à Lille.</b>",
+    "<b>Je réalise des missions en freelance full-remote depuis ce printemps et souhaite désormais monter en compétences en occupant un poste basé à Lille.</b>",
 ]
 
 const stacklist = [
