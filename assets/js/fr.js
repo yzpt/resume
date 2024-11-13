@@ -9,8 +9,8 @@ const stacklist = [
     "GCP : BigQuery, Storage, Cloud Functions, Dataproc, Pub/Sub, Run",
     "Flask, FastAPI, Docker, Git",
     "Spark, Kafka, Airflow, Postgresql, MySQL, Cassandra, SQLAlchemy",
-    "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy",
-    "J'apprends : React, Django, QGIS, clean-code, principes SOLID & TDD",
+    "GeoPandas, Leaflet, OpenStreetMap, Google Maps API, Google Earth Engine, GeoPy, postGIS",
+    "J'apprends : React, Django, QGIS, GeoServer, clean-code, principes SOLID & TDD",
 ]
 
 
