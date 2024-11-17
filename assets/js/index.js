@@ -1,4 +1,4 @@
-import { introduction, experiences, diplomes, projects, stacklist, title } from './fr.js';
+import { introduction, experiences, diplomes, projects, stacklist, misc } from './fr.js';
 
 
 
@@ -199,9 +199,16 @@ const renderStack = (stacklist) => {
 }
         
 
-const renderHeaderTitle = (denomination) => {
+const renderMisc = (misc) => {
     const title = document.getElementById("title");
-    title.innerHTML = denomination;
+    const experienceHeader = document.getElementById("header-experiences");
+    const diplomeHeader = document.getElementById("header-diplomes");
+    const projectHeader = document.getElementById("header-projects");
+
+    title.innerHTML = misc.title;
+    experienceHeader.innerHTML = misc.experiencesHeader;
+    diplomeHeader.innerHTML = misc.diplomesHeader;
+    projectHeader.innerHTML = misc.projectsHeader;
 }
 
 
@@ -237,7 +244,7 @@ englishFlag.addEventListener("click", () => toggleLanguage("en"));
 
 
 function updateContent(langModule) {
-    const { introduction, experiences, diplomes, projects, stacklist, title } = langModule;
+    const { introduction, experiences, diplomes, projects, stacklist, misc } = langModule;
 
     // Clear current content
     document.getElementById("experience-list").innerHTML = "";
@@ -253,7 +260,7 @@ function updateContent(langModule) {
     renderIntroduction(introduction);
     renderProjects(projects);
     renderStack(stacklist);
-    renderHeaderTitle(title);
+    renderMisc(misc);
 }
 
 window.onload = () => {
@@ -263,5 +270,5 @@ window.onload = () => {
     renderDiplomes(diplomes);
     renderProjects(projects);
     renderStack(stacklist);
-    renderHeaderTitle(title);
+    renderMisc(misc);
 }

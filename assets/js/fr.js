@@ -257,6 +257,11 @@ const formations = [
 ]
 
 
-const title = "Développeur Python / Data";
+const misc = {
+        title: "Développeur Python / Data",
+        experiencesHeader: "Expériences",
+        diplomesHeader: "Diplômes",
+        projectsHeader: "Projets",
+    }
 
-export { introduction, experiences, diplomes, projects, formations, stacklist, title };
+export { introduction, experiences, diplomes, projects, formations, stacklist, misc };
