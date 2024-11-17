@@ -213,15 +213,6 @@ const projects = [
         ],
     },
     {
-        title: "Introduction à l'imagerie satellite (Sentinel-2) avec Google Earth Engine",
-        description: "Estimation de la végétation du Nord-Pas-de-Calais",
-        stack: ["Google Earth Engine", "Jupyter"],
-        images: [
-            "assets/images/sentinel2.png",
-        ],
-        github: "https://github.com/yzpt/gee",
-    },
-    {
         title: "Dashboards divers",
         description: "",
         stack: ["Dash", "Plotly", "GeoPandas"],
@@ -245,6 +236,15 @@ const projects = [
             "assets/images/zapmaths2.png",
         ],
         github: "https://github.com/ypzt/zapmaths",
+    },
+    {
+        title: "Introduction à l'imagerie satellite (Sentinel-2) avec Google Earth Engine",
+        description: "Estimation de la végétation du Nord-Pas-de-Calais",
+        stack: ["Google Earth Engine", "Jupyter"],
+        images: [
+            "assets/images/sentinel2.png",
+        ],
+        github: "https://github.com/yzpt/gee",
     },
 ]
 
