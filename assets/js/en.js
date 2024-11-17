@@ -1,6 +1,6 @@
 const introduction = [
     "With a background as a certified mathematics teacher and research engineer, I am now focused on Python and data, driven by a passion for analysis and a strong problem-solving ability, which I have developed through coding since the age of 10.",
-    "<b>I have been working as a full-remote freelancer since this spring and now wish to enhance my skills by taking on a position based in Lille.</b>",
+    "<b>I have been working as a remote freelancer since this spring, and I am looking for long-term collaborations.</b>",
 ]
 
 const stacklist = [
