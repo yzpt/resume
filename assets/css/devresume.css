@@ -14072,3 +14072,22 @@ a.resume-link:hover {
        margin-bottom: 0 !important;
    }
 }
+
+
+.language-toggle {
+   display: flex;
+   gap: 10px;
+   cursor: pointer;
+align-items: center;
+}
+
+.language-toggle img {
+   transition: transform 0.2s ease;
+opacity: 0.5;
+}
+
+.language-toggle img.active {
+   transform: scale(1.2);
+opacity: 1;
+}
+

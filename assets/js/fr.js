@@ -22,10 +22,9 @@ const experiences = [
         tasks: [
             "Développement d'algorithmes de tracking GPS : segmentation, détection de mode de transport",
             "Dashboards de visualisation des évaluations de performances des algorithmes",
-            "POC d'un trackeur GPS/GPRS basé sur un ESP32"
         ],
         description: "",
-        stack: ["Pandas", "Scikit-Learn", "Dash", "Plotly", "Postgresql", "ESP32"],
+        stack: ["Pandas", "Scikit-Learn", "Dash", "Plotly", "Postgresql"],
     },
     {
         title: "Développeur Python",
@@ -233,8 +232,14 @@ const projects = [
     },
     {
         title: "Zapmaths",
-        description: "Application web d'entraînement aux calculs",
+        description: "Application web développée durant ma carrière d’enseignant dédiée à l’entraînements des automatismes de calculs des élèves.",
         stack: ["Python", "Php", "MySQL", "Apache", "Excel"],
+        tasks: [
+            "Php & MySQL sur serveur Apache",
+            "Génération semi-aléatoires des valeurs des énoncés / illustrations et corrections",
+            "Suivi précis de l’activité des élèves",
+            "150 000+ questions traitées par année scolaire",
+        ],
         images: [
             "assets/images/zapmaths1.png",
             "assets/images/zapmaths2.png",
@@ -242,7 +247,6 @@ const projects = [
         github: "https://github.com/ypzt/zapmaths",
     },
 ]
-
 
 const formations = [
     {
@@ -253,4 +257,6 @@ const formations = [
 ]
 
 
-export { introduction, experiences, diplomes, projects, formations, stacklist };
+const title = "Développeur Python / Data";
+
+export { introduction, experiences, diplomes, projects, formations, stacklist, title };

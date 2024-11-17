@@ -1,8 +1,8 @@
-import { introduction, experiences, diplomes, projects, formations, stacklist } from './fr.js';
-// en.js -> english version
+import { introduction, experiences, diplomes, projects, stacklist, title } from './fr.js';
 
 
-const renderProjects = () => {
+
+const renderProjects = (projects) => {
     const projectList = document.getElementById("projects-list");
 
     projects.forEach(project => {
@@ -100,10 +100,7 @@ const renderProjects = () => {
 };
 
 
-
-
-
-const renderExperiences = () => {
+const renderExperiences = (experiences) => {
     const experienceList = document.getElementById("experience-list");
 
     experiences.forEach(exp => {
@@ -135,7 +132,7 @@ const renderExperiences = () => {
 
 
 
-const renderDiplomes = () => {
+const renderDiplomes = (diplomes) => {
     const diplomeList = document.getElementById("diplomes-list");
 
     diplomes.forEach(dip => {
@@ -168,26 +165,8 @@ const renderDiplomes = () => {
 }
 
 
-const renderFormations = () => {
-    const formationList = document.getElementById("formation-list");
 
-    formations.forEach(form => {
-        const item = document.createElement("div");
-        item.classList.add("item", "mb-3");
-
-        item.innerHTML = `
-            ${form.hr ? '<hr>' : ''}
-            <div class="item-heading row align-items-center mb-0">
-                <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${form.title}</h4>
-                <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${form.school} | ${form.date}</div>
-            </div>
-        `;
-        formationList.appendChild(item);
-    }
-    )
-}
-
-const renderIntroduction = () => {
+const renderIntroduction = (introduction) => {
     const introductionList = document.getElementById("introduction-list");
 
     if (introductionList) {
@@ -205,7 +184,7 @@ const renderIntroduction = () => {
     // }
 };
 
-const renderStack = () => {
+const renderStack = (stacklist) => {
     const stackList = document.getElementById("stack-list");
 
     stacklist.forEach(item => {
@@ -219,15 +198,70 @@ const renderStack = () => {
     )
 }
         
-        
+
+const renderHeaderTitle = (denomination) => {
+    const title = document.getElementById("title");
+    title.innerHTML = denomination;
+}
 
 
-// Call the function to render experiences when the page loads
+
+
+
+// Get references to the flags
+const frenchFlag = document.getElementById("fr");
+const englishFlag = document.getElementById("en");
+
+// Toggle active class and update content
+async function toggleLanguage(language) {
+    // Toggle active class for language selection
+    if (language === "fr") {
+        frenchFlag.classList.add("active");
+        englishFlag.classList.remove("active");
+
+        const langModule = await import('./fr.js');
+        updateContent(langModule);
+    } else if (language === "en") {
+        englishFlag.classList.add("active");
+        frenchFlag.classList.remove("active");
+
+        const langModule = await import('./en.js');
+        updateContent(langModule);
+    }
+}
+
+
+// Add event listeners for language toggle
+frenchFlag.addEventListener("click", () => toggleLanguage("fr"));
+englishFlag.addEventListener("click", () => toggleLanguage("en"));
+
+
+function updateContent(langModule) {
+    const { introduction, experiences, diplomes, projects, stacklist, title } = langModule;
+
+    // Clear current content
+    document.getElementById("experience-list").innerHTML = "";
+    document.getElementById("diplomes-list").innerHTML = "";
+    document.getElementById("introduction-list").innerHTML = "";
+    document.getElementById("projects-list").innerHTML = "";
+    document.getElementById("stack-list").innerHTML = "";
+    document.getElementById("title").innerHTML = "";
+
+    // Re-render content with the new language data
+    renderExperiences(experiences);
+    renderDiplomes(diplomes);
+    renderIntroduction(introduction);
+    renderProjects(projects);
+    renderStack(stacklist);
+    renderHeaderTitle(title);
+}
+
 window.onload = () => {
-    renderExperiences();
-    renderDiplomes();
-    renderIntroduction();
-    // renderFormations();
-    renderProjects();
-    renderStack();
-};
+    toggleLanguage("fr");
+    renderIntroduction(introduction);
+    renderExperiences(experiences);
+    renderDiplomes(diplomes);
+    renderProjects(projects);
+    renderStack(stacklist);
+    renderHeaderTitle(title);
+}

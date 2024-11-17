@@ -34,13 +34,18 @@
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-8">
 							<h2 class="resume-name mb-0">Yohann Zapart</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Developpeur Python / Data / SIG</div>
+							<div id="title" class="resume-tagline mb-3 mb-md-0">Developpeur Python / Data / SIG</div>
 						</div><!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-4">
+							<div class="language-toggle m-0" style="justify-content: flex-end;">
+								<div style="width: 50px; display: flex; justify-content: space-between;">
+									<img src="assets/images/france.png" alt="France" id="fr" class="active" style="width: 20px; height: 20px;">
+									<img src="assets/images/united-kingdom.png" alt="English" id="en" style="width: 20px; height: 20px;">
+								</div>
+							</div>
 							<ul class="list-unstyled mb-0">
 								<li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg me-2 "></i><a class="resume-link" href="tel:#">06 51 84 71 74</a></li>
 								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i><a class="resume-link" href="mailto:#">yohann.zapart@gmail.com</a></li>
-								<!-- <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="#">www.yourwebsite.com</a></li> -->
 								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>Lille, France</li>
 								<!-- <li class="mb-0"><a class="resume-link" href="#"><i class="fa-brands fa-github-square fa-2x me-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">github.com/username</span></a></li> -->
 								<li class="mb-0"><a class="resume-link" href="https://www.linkedin.com/in/yohann-zapart" target="_blank"><i class="fa-brands fa-linkedin fa-2x me-2" data-fa-transform="down-4"></i><span class="d-lg-inline-block text-muted">linkedin.com/in/yohann-zapart</span></a></li>
@@ -49,22 +54,15 @@
 					</div><!--//row-->
 					
 				</div><!--//resume-header-->
-				<!-- <div class="text-center">
-					<ul class="resume-social-list list-inline mx-auto mb-0 mt-3 d-inline-block">
-						<li class="list-inline-item mb-lg-0 me-3"><a class="resume-link" href="#"><i class="fa-brands fa-github-square fa-2x me-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">github.com/yzpt</span></a></li>
-						<li class="list-inline-item mb-lg-0 me-3"><a class="resume-link" href="#"><i class="fa-brands fa-linkedin fa-2x me-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">linkedin.com/in/yohann-zapart</span></a></li>
-					</ul>
-				</div>
-				<hr> -->
 				<div class="resume-intro py-3 mt-3">
 					<div class="row align-items-center">
 						<div class="col-12 col-md-3 col-xl-2 text-center">
-						    <img class="resume-profile-image mb-md-0 me-md-5  ms-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
+						    <img class="resume-profile-image mb-md-0 ms-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
 						</div>
 						
 						<div class="col text-start">
 							<div id="introduction-list" class="m-3 mb-0"></div>
-						</div><!--//col-->
+						</div>
 					</div>
 				</div><!--//resume-intro-->
 				<hr>
@@ -87,11 +85,6 @@
 								<div id="diplomes-list"></div>
 							</section><!--//diplomes-section-->	
 
-							<!-- <section class="formation-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Formations</h3>
-								<div id="formation-list"></div>
-							</section> -->
-							
 							<section class="projects-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Projets</h3>
 								<div id="projects-list" class="row mb-4"></div>
