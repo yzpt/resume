@@ -184,8 +184,7 @@ const projects = [
             "<a href='https://github.com/yzpt/dataflow_carburants'>GCP Dataflow & BigQuery, fuel prices</a><br>",
             "<a href='https://github.com/yzpt/kafka_kraft'>Kafka KRaft mode</a><br>",
             "<a href='https://github.com/yzpt/upw_test_kafka_spark_docker'>SASL/PLAIN and ACLs on Kafka</a><br>",
-            "<a href='https://github.com/yzpt/upw_test_kafka_spark_docker'>Kafka + Spark + Docker</a><br>",
-            "<a href='https://github.com/yzpt/spark_on_kubernetes'>Spark on Kubernetes</a><br>",
+            "<a href='https://github.com/yzpt/spark_on_kubernetes'>Spark opertor on Kubernetes</a><br>",
         ],
         stack: ["Spark", "Kafka", "Airflow", "Postgresql", "Cassandra", "Docker", "GCP"],
         images: [
@@ -250,7 +249,7 @@ const formations = [
 
 
 const misc = {
-        title: "Python / Data Developer",
+        title: "Python Developer / Data Engineer",
         experiencesHeader: "Experiences",
         diplomesHeader: "Diplomas",
         projectsHeader: "Projects",
