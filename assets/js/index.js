@@ -110,7 +110,7 @@ const renderExperiences = (experiences) => {
         item.innerHTML = `
             ${exp.hr ? '<hr>' : ''}
             <div class="item-heading row align-items-center mb-0">
-                <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">${exp.title}</h4>
+                <h4 class="item-title col-12 col-md-6 col-lg-6 mb-md-0">${exp.title}</h4>
                 <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-start text-md-end">${exp.company} | ${exp.date}</div>
             </div>
             <div class="item-content">
@@ -141,7 +141,7 @@ const renderDiplomes = (diplomes) => {
 
         item.innerHTML = `
             <div class="item-heading row align-items-center mb-0">
-            <h4 class="item-title col-12 col-md-9 col-lg-9 mb-2 mb-md-0">${dip.title}</h4>
+            <h4 class="item-title col-12 col-md-9 col-lg-9 mb-md-0">${dip.title}</h4>
             <div class="item-meta col-12 col-md-3 col-lg-3 text-muted text-start text-md-end">${dip.school} | ${dip.date}</div>
             </div>
             <div class="item-content">

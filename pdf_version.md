@@ -1,1 +1,0 @@
-https://themes.3rdwavemedia.com/resources/sketch-template/devresume-sketch-sketch-resume-template-for-software-developers/
